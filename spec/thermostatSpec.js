@@ -28,6 +28,13 @@ describe('Thermostat', function() {
 
     });
 
+    it('raises an error when reaching minimum temp', function(){
+
+      thermostat.temperature = 9;
+      expect(thermostat.decrease()).toEqual('Too low!');
+
+    });
+
   });
 
 });
