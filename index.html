@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script src='./src/thermostat.js'></script>
+</head>
+
+<body>
+
+  <div id="temperature">
+
+  </div>
+
+  <button onclick="DownButton()" id='down'><<</button>
+  <button onclick="UpButton()" id='up'>>></button>
+
+  <script>
+
+  therm = new Thermostat();
+  document.getElementById("temperature").innerHTML = therm.temperature;
+
+  function UpButton(){
+    therm.increase();
+    document.getElementById("temperature").innerHTML = therm.temperature;
+  }
+
+  function DownButton(){
+    therm.decrease();
+    document.getElementById("temperature").innerHTML = therm.temperature;
+  }
+
+    // therm = new Thermostat();
+    // document.getElementById("temperature").innerHTML = therm.temperature;
+    // document.getElementById("up").onclick = therm.increase();
+
+  </script>
+
+</body>
+
+</html>

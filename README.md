@@ -1,13 +1,15 @@
-<<<<<<< HEAD
-#thermostat
-=======
-# thermostat
->>>>>>> 614497ccf2f5ea0fee1bddca70f99f63dfffdf26
+Creating a web-based thermostat written in JavaScript, with the following specs:
 
 
-
-
-
-The thermostat should colour the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
-
+Thermostat starts at 20 degrees
+You can increase the temp with the up button
+You can decrease the temp with the down button
+The minimum temperature is 10 degrees
+If power saving mode is on, the maximum temperature is 25 degrees
+If power saving mode is off, the maximum temperature is 32 degrees
+Power saving mode is on by default
+You can reset the temperature to 20 by hitting the reset button
+The thermostat should color the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
 After every temperature change, the thermostat makes a POST request to localhost:4567/temperature_change, with the new temperature
+
+It's great!
