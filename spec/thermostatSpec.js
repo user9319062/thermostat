@@ -45,8 +45,8 @@ describe('Thermostat', function() {
 
       it('raises an error when reaching maximum temp', function(){
 
-        thermostat.temperature = 26
-        expect(thermostat.increase()).toEqual('Too high!')
+        thermostat.temperature = 26;
+        expect(thermostat.increase()).toEqual('Too high!');
 
       });
 
@@ -57,6 +57,42 @@ describe('Thermostat', function() {
       thermostat.isPowerSaving = false;
       thermostat.temperature = 33;
       expect(thermostat.increase()).toEqual('Too high!')
+    });
+
+  });
+
+  describe('the reset button', function(){
+
+    it('resets the temperature when pressed', function(){
+
+      thermostat.increase();
+      thermostat.increase();
+      thermostat.increase();
+
+      thermostat.reset_temperature();
+
+      expect(thermostat.temperature).toEqual(20);
+    });
+  });
+
+  describe('the colour display', function(){
+
+    it('displays yellow by default', function(){
+
+      thermostat.temperature = 20;
+      expect(thermostat.colourify()).toEqual('Yellow');
+    });
+
+    it('displays green when the temperature is under 18', function(){
+
+      thermostat.temperature = 16;
+      expect(thermostat.colourify()).toEqual('Green');
+    });
+
+    it('displays red when the temperature is over 25', function(){
+
+      thermostat.temperature = 27;
+      expect(thermostat.colourify()).toEqual('Red');
     });
 
   });
