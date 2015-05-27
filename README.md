@@ -5,7 +5,6 @@
 >>>>>>> 614497ccf2f5ea0fee1bddca70f99f63dfffdf26
 
 
-> If power saving mode is off, the maximum temperature is 32 degrees
 
 
 

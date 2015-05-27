@@ -35,12 +35,6 @@ describe('Thermostat', function() {
 
     });
 
-    // it('raises an error when reaching maximum temp', function(){
-
-    //   thermostat.temperature = 26
-    //   expect(thermostat.increase()).toEqual('Too high!')
-    // })
-
     describe('power saving mode', function(){
 
       it('is on by default', function(){
@@ -56,6 +50,13 @@ describe('Thermostat', function() {
 
       });
 
+    });
+
+    it('raises an error when reaching maximum temp', function(){
+
+      thermostat.isPowerSaving = false;
+      thermostat.temperature = 33;
+      expect(thermostat.increase()).toEqual('Too high!')
     });
 
   });
