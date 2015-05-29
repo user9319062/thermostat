@@ -5,17 +5,18 @@ function Thermostat(){
   }
 
 Thermostat.prototype.increase = function() {
+  var toohigh = "Too high!"
   if(this.isPowerSaving && this.temperature >= 26){
-    return "Too high!";}
+    return toohigh}
   else if(this.temperature >= 33){
-    return "Too high!";
+    return toohigh;
   }
   this.temperature++;
 };
 
 
 Thermostat.prototype.decrease = function() {
-  if(this.temperature <= 9){
+  if(this.temperature <= 10){
     return "Too low!";
   }
   this.temperature--;
@@ -34,6 +35,6 @@ Thermostat.prototype.colourify = function() {
     return "Yellow";
   }
   else{
-    return "Red";
+    return "Red"
   }
 };
