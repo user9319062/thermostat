@@ -5,9 +5,8 @@ function startMeUp() {
   therm.isPowerSaving = true;
 }
 
-  var toggle = document.getElementById("onoff")
-
   function togglePowerSave(){
+    var toggle = document.getElementById("onoff");
     if (toggle.checked){
       therm.isPowerSaving = true;
   } else {
@@ -26,13 +25,11 @@ function startMeUp() {
         changecol.style.color = "red";
       }
     }
-
-  document.getElementById("temperature").innerHTML = therm.temperature;
-
   function UpButton(){
     controlColour();
     togglePowerSave();
     therm.increase();
+    console.log(therm.temperature)
     document.getElementById("temperature").innerHTML = therm.temperature;
   }
 
@@ -42,5 +39,8 @@ function startMeUp() {
     document.getElementById("temperature").innerHTML = therm.temperature;
   }
 
-
-
+  function resetButton(){
+    therm.resetTemperature();;
+    controlColour();
+    document.getElementById("temperature").innerHTML = therm.temperature;
+  }

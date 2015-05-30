@@ -4,20 +4,21 @@
   <script src='./src/thermostat.js'></script>
 </head>
 
+<body bgcolor="#000000">
+
 <body onload="startMeUp()">
 
   <h1><div id="temperature"><span>
 
   </span>
   </div></h1>
-
+  <p>
+  <button onclick="resetButton()" id='reset'>R E S E T</button>
   <button onclick="DownButton()" id='down'><<</button>
   <button onclick="UpButton()" id='up'>>></button>
 
-  <P><input type="checkbox" id="onoff"> <i> <== power saving mode</i></p>
-
-<!-- <div id="error">
-</div> -->
+  <P>
+  <span style="color:white;font-weight:bold"><input type="checkbox" id="onoff"> <i> <== power saving mode</i></p></span>
 
 </body>
 
