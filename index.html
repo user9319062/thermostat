@@ -2,6 +2,14 @@
 <head>
   <script src='./src/app.js'></script>
   <script src='./src/thermostat.js'></script>
+  <script>
+  var down = new Audio
+  down.src ="down.mp3"
+  var up = new Audio
+  up.src ="up.mp3"
+  var reset = new Audio
+  reset.src ="reset.mp3"
+  </script>
 </head>
 
 
@@ -54,10 +62,10 @@
   <div id="temperature">
   </div></h1>
   <p>
-  <button class = 'btn'onclick="DownButton()" id='down'><<</button>
-  <button class = 'btn' onclick="UpButton()" id='up'>>></button><P>
+  <button class = 'btn' onclick="DownButton()" onmousedown="down.play()" id='down'><<</button>
+  <button class = 'btn' onclick="UpButton()" onmousedown="up.play()" id='up'>>></button><P>
 
-  <button class = 'btn'onclick="resetButton()" id='reset'>R E S E T</button>
+  <button class = 'btn'onclick="resetButton()" onmousedown="reset.play()" id='reset'>R E S E T</button>
 
   <p>
   <span style="color:white;font-weight:bold"><input type="checkbox" id="onoff"> <i> <== power saving mode</i></p></span>
