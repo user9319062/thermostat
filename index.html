@@ -4,11 +4,17 @@
   <script src='./src/thermostat.js'></script>
   <script>
   var down = new Audio
-  down.src ="down.mp3"
+  down.src ="./sounds/down.mp3"
+  var powersaving = new Audio
+  powersaving.src ="./sounds/power_saving.mp3"
+  powersaving.loop() = true;
   var up = new Audio
-  up.src ="up.mp3"
+  up.src ="./sounds/up.mp3"
   var reset = new Audio
-  reset.src ="reset.mp3"
+  reset.src ="./sounds/reset.mp3"
+  if (document.getElementById('onoff').checked){
+                reset.play();
+            }
   </script>
 </head>
 
@@ -65,10 +71,10 @@
   <button class = 'btn' onclick="DownButton()" onmousedown="down.play()" id='down'><<</button>
   <button class = 'btn' onclick="UpButton()" onmousedown="up.play()" id='up'>>></button><P>
 
-  <button class = 'btn'onclick="resetButton()" onmousedown="reset.play()" id='reset'>R E S E T</button>
+  <button class = 'btn' onclick="resetButton()" onmousedown="reset.play()" id='reset'>R E S E T</button>
 
   <p>
-  <span style="color:white;font-weight:bold"><input type="checkbox" id="onoff"> <i> <== power saving mode</i></p></span>
+  <span style="color:white;font-weight:bold"><input type="checkbox" onmousedown="powersaving.play()" id="onoff"> <i> <== power saving mode</i></p></span>
 
 </body>
 

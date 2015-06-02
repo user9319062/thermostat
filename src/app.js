@@ -9,9 +9,10 @@ function startMeUp() {
     var toggle = document.getElementById("onoff");
     if (toggle.checked){
       therm.isPowerSaving = true;
+
   } else {
       therm.isPowerSaving = false;
-    }
+     }
   }
 
   function controlColour() {
