@@ -1,0 +1,226 @@
+<!-- paste this back in if all goes to shit:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='./src/app.js'></script>
+  <script src='./src/thermostat.js'></script>
+  <script src="https://code.createjs.com/soundjs-0.6.1.min.js"></script>
+  <script>
+  // var down = new Audio
+  // down.src ="./sounds/down.mp3"
+  // var powersaving = new Audio
+  // powersaving.src ="./sounds/power_saving.mp3"
+  // var up = new Audio
+  // up.src ="./sounds/up.mp3"
+  // var reset = new Audio
+  // reset.src ="./sounds/reset.mp3"
+  // if (document.getElementById('onoff').checked){
+  //               reset.play();
+  //           }
+
+
+
+  </script>
+</head>
+
+
+
+<style>
+
+
+        h1 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 10px 10px 20px #082b34;
+    font-size: 1000%;
+    text-align: center;
+}
+      p {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+      }
+
+      .btn {
+  background: #445561;
+  background-image: -webkit-linear-gradient(top, #445561, #2980b9);
+  background-image: -moz-linear-gradient(top, #445561, #2980b9);
+  background-image: -ms-linear-gradient(top, #445561, #2980b9);
+  background-image: -o-linear-gradient(top, #445561, #2980b9);
+  background-image: linear-gradient(to bottom, #445561, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+    .headline1 {
+  border-bottom: 0px dashed #aaa;
+  border-left: 7px solid #aaa;
+  border-left: 7px solid rgba(0,0,0,.2);
+  margin: 0 -15px 15px -22px;
+  padding: 5px 15px;
+}
+
+
+</style>
+<body bgcolor="#000000">
+<body onload="startMeUp()">
+
+  <h1 class="headline1">
+
+  <div id="temperature">
+  </div></h1>
+  <p>
+  <button class = 'btn' onclick="DownButton()" onmousedown="down.play()" id='down'><<</button>
+  <button class = 'btn' onclick="UpButton()" onmousedown="up.play()" id='up'>>></button><P>
+
+  <button class = 'btn' onclick="resetButton()" onmousedown="reset.play()" id='reset'>R E S E T</button>
+
+  <p>
+  <span style="color:white;font-weight:bold"><input type="checkbox" onmousedown="powersaving.play()" id="onoff"> <i> <== power saving mode</i></p></span>
+
+</body>
+
+</html> -->
+
+
+<html>
+  <head>
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+      var up = "up";
+      var down = "down";
+      var reset = "reset";
+
+      function loadSound () {
+        createjs.Sound.registerSound("./public/sounds/up.mp3", up);
+        createjs.Sound.registerSound("./public/sounds/down.mp3", down);
+        createjs.Sound.registerSound("./public/sounds/reset.mp3", reset);
+      }
+
+      function playUp () {
+        createjs.Sound.play(up);
+      }
+
+      function playDown () {
+        createjs.Sound.play(down)
+      }
+
+      function playReset () {
+        createjs.Sound.play(reset)
+      }
+
+    </script>
+  </head>
+  <body onload="loadSound();">
+    <button onclick="playUp();" class="playSound">up</button>
+    <button onclick="playDown();" class="playSound">down</button>
+    <button onclick="playReset();" class="playSound">reset</button>
+
+  </body>
+</html>
+
+<!--
+FROM HERE IS THE BLLSHIT WE WROTE OMN FRIDAY
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='./src/app.js'></script>
+  <script src='./src/thermostat.js'></script>
+  <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+  <script>
+ var up = "up";
+      var down = "down";
+      var reset = "reset";
+
+      function loadSound () {
+        createjs.Sound.registerSound("up.mp3", up);
+        createjs.Sound.registerSound("down.mp3", down);
+        createjs.Sound.registerSound("reset.mp3", reset);
+      }
+
+      function playUp () {
+        createjs.Sound.play(up);
+      }
+
+      function playDown () {
+        createjs.Sound.play(down)
+      }
+
+      function playReset () {
+        createjs.Sound.play(reset)
+      }
+  </script>
+</head>
+
+
+
+<style>
+
+
+        h1 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 10px 10px 20px #082b34;
+    font-size: 1000%;
+    text-align: center;
+}
+      p {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+      }
+
+      .btn {
+  background: #445561;
+  background-image: -webkit-linear-gradient(top, #445561, #2980b9);
+  background-image: -moz-linear-gradient(top, #445561, #2980b9);
+  background-image: -ms-linear-gradient(top, #445561, #2980b9);
+  background-image: -o-linear-gradient(top, #445561, #2980b9);
+  background-image: linear-gradient(to bottom, #445561, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+    .headline1 {
+  border-bottom: 0px dashed #aaa;
+  border-left: 7px solid #aaa;
+  border-left: 7px solid rgba(0,0,0,.2);
+  margin: 0 -15px 15px -22px;
+  padding: 5px 15px;
+}
+
+
+</style>
+<body bgcolor="#000000">
+<body onload="startMeUp(); loadSound();">
+
+  <h1 class="headline1">
+
+  <div id="temperature">
+  </div></h1>
+  <p>
+  <button class = 'btn' onclick="DownButton()" onmousedown="down.play()" id='down'><<</button>
+
+      <button onclick="playDown();" class="playSound">Downy</button>
+
+
+
+
+  <button class = 'btn' onclick="UpButton()" onmousedown="up.play()" id='up'>>></button><P>
+
+  <button class = 'btn' onclick="resetButton()" onmousedown="reset.play()" id='reset'>R E S E T</button>
+
+  <p>
+  <span style="color:white;font-weight:bold"><input type="checkbox" onmousedown="powersaving.play()" id="onoff"> <i> <== power saving mode</i></p></span>
+
+</body>
+
+</html> -->

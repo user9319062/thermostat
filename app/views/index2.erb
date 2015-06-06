@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='./src/app.js'></script>
+  <script src='./src/thermostat.js'></script>
+  <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+  <script>
+  var down = new Audio
+  down.src ="./sounds/down.mp3"
+  var powersaving = new Audio
+  powersaving.src ="./sounds/power_saving.mp3"
+  var up = new Audio
+  up.src ="./sounds/up.mp3"
+  var reset = new Audio
+  reset.src ="./sounds/reset.mp3"
+  if (document.getElementById('onoff').checked){
+                reset.play();
+            }
+
+      var up = "upp";
+      var down = "downn";
+      var reset = "resett";
+
+      function loadSound () {
+        createjs.Sound.registerSound("./sounds/up.mp3", upp);
+        createjs.Sound.registerSound("./sounds/down.mp3", downn);
+        createjs.Sound.registerSound("./sounds/reset.mp3", resett);
+      }
+
+      function playUp () {
+        createjs.Sound.play(upp);
+      }
+
+      function playDown () {
+        createjs.Sound.play(downn);
+      }
+
+      function playReset () {
+        createjs.Sound.play(resett);
+      }
+
+
+  </script>
+</head>
+
+
+
+<style>
+
+      h1 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 10px 10px 20px #082b34;
+    font-size: 1000%;
+    text-align: center;
+}
+
+</style>
+<body bgcolor="#000000">
+<body onload="startMeUp()">
+<body onload="loadSound();">
+
+
+  <h1 class="headline1">
+  <div id="temperature">
+  </div></h1>
+
+  <p>
+  <button class = 'btn' onclick="DownButton()" onmousedown="down.play()" id='downn'><<</button>
+  <button class = 'btn' onclick="UpButton()" onmousedown="up.play()" id='upp'>>></button><P>
+  <button class = 'btn' onclick="resetButton()" onmousedown="reset.play()" id='resett'>R E S E T</button>
+
+  <p>
+    <button onclick="playUp();" class="playSound;">up</button>
+    <button onclick="playDown();" class="playSound;">down</button>
+    <button onclick="playReset();" class="playSound;">reset</button>
+
+  <p>
+  <span style="color:white;font-weight:bold"><input type="checkbox" onmousedown="powersaving.play()" id="onoff"> <i> <== power saving mode</i></p></span>
+
+</body>
+
+</html>
