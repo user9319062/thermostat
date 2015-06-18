@@ -11,5 +11,3 @@ end
 get '/mollify' do
   erb :mollify
 end
-
-end
