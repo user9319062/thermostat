@@ -7,7 +7,3 @@ end
 get '/sanj' do
   erb :sanj
 end
-
-get '/mollify' do
-  erb :mollify
-end
