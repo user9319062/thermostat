@@ -1,6 +1,6 @@
 # THERMOSTAT!
 
-#### A thermostat application created entirely in Javascript
+#### - A thermostat application created entirely in Javascript
 
 ![thermostat](http://file.vintageadbrowser.com/y6gls8nnr5eucu.jpg)
 
