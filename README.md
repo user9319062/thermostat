@@ -1,18 +1,18 @@
-## THERMOSTAT!
-=================
+### THERMOSTAT!
 
-This is a thermostat application created entirely in Javascript - the back-end was written first as a TDD project, with the front-end following (without tests, since functionality is relatively minimal). Again, the front-end was written entirely in pure Javascript (no jquery - it's a tiny app!)
+# A thermostat application created entirely in Javascript
 
 ![thermostat](http://file.vintageadbrowser.com/y6gls8nnr5eucu.jpg)
 
-I added sound as an experiment based on some late-night research on how web audio works. Obviously from a user's perspective, an app with sound turned on automatically is a big no-no but, since it's essentially a roundabout way of making a silly joke, I think it's justified in this case.
+The back-end was written first as a TDD project, with the front-end following (without tests, since functionality is relatively minimal). The front-end was written entirely in pure Javascript (no jquery) as I wanted to practice writing functions in JS, since it was my first time using the language. This obviously resulted in a lot of repetition.
+
+I added sound as an experiment based on some late-night research on how web audio works. Obviously from a user's perspective, an app with sound turned on automatically is a big no-no but I left it in in the spirit of experimentation.
 
 Sounds were recorded and treated using the free open-source Audio application Audacity (http://sourceforge.net/projects/audacity/)
 
 Refactoring to make everything Sinatra-ready was a quick step. The app is deployed to Heroku here: https://polar-basin-3888.herokuapp.com/
 
-# Original Specs:
------------------
+## Original Specs:
 
 - Thermostat starts at 20 degrees
 - You can increase the temp with the up button
