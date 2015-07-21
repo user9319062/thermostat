@@ -1,6 +1,6 @@
-### THERMOSTAT!
+# THERMOSTAT!
 
-# A thermostat application created entirely in Javascript
+## A thermostat application created entirely in Javascript
 
 ![thermostat](http://file.vintageadbrowser.com/y6gls8nnr5eucu.jpg)
 
@@ -27,8 +27,7 @@ Refactoring to make everything Sinatra-ready was a quick step. The app is deploy
 
 - In its current state it fulfils the basic specs above, bar the POST request. The minimum-maximum temperatures need a little work and the web interface doesn't reflect the fact that the main engine has power saving on by default
 
-# To Do:
---------
+## To Do:
 
 - Implement a warning for when the maximum temperature is reached (in power saving mode and not), and add appropriate sound effects
 - Deal with the POST request
