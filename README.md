@@ -1,4 +1,4 @@
-# THERMOSTAT!
+# THERMOSTAT
 
 #### - A thermostat application created entirely in Javascript
 
