@@ -30,7 +30,6 @@ function startMeUp() {
     controlColour();
     togglePowerSave();
     therm.increase();
-    console.log(therm.temperature)
     document.getElementById("temperature").innerHTML = therm.temperature;
   }
 
